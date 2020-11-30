@@ -1,0 +1,49 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background-color: rgb(85, 40, 65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Pulse {
+  width: 50px;
+  height: 50px;
+  border: 5px solid green;
+  background-color: green;
+  border-radius: 50%;
+  animation: green 3s 1s infinite linear alternate;
+}
+
+@keyframes green {
+  10% {
+    transform: translateZ(10px);
+    opacity: 0.5;
+    height: 20px;
+    width: 20px;
+  }
+
+  50% {
+    opacity: 0.4;
+    height: 40px;
+    width: 40px;
+  }
+  75% {
+    opacity: 0.3;
+    height: 40px;
+    width: 40px;
+  }
+
+  100% {
+    opacity: 0.1;
+    height: 60px;
+    width: 60px;
+    transform: translateZ(-10px);
+  }
+}
